@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="main">
+        <div class="heading">
+          <div class="game-name">
+            <p>ROCK</p>
+            <p>PAPER</p>
+            <p>SCISSORS</p>
+          </div>
+          <div class="scores">
+            <div class="computer-score">
+              <h1>COMPUTER SCORE</h1>
+              <p class="c-score">0</p>
+            </div>
+            <div class="your-score">
+              <h1>YOUR</h1>
+              <h1>SCORE</h1>
+              <p class="p-score">0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+
+        <div id="rock" class="circle circle-1">
+          <img class="icon icon1" src="./assets/rock.png" alt="" />
+        </div>
+        <div id="scissor" class="circle circle-2">
+          <img class="icon" src="./assets/scissor.png" alt="" />
+        </div>
+        <div id="paper" class="circle circle-3">
+          <img class="icon icon3" src="./assets/paper.png" alt="" />
+        </div>
+      </div>
+
+      <div class="game-container2">
+        <div class="game-box">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+            "
+          >
+            <h1 style="color: white">YOU</h1>
+            <div class="big-choice" id="big-choice"></div>
+          </div>
+          <div class="pc-win-result" id="result-container">
+            <h1 class="result" id="result-text">YOU LOST</h1>
+            <h3 id="text-against">AGAINST PC</h3>
+            <button class="play-again">PLAY AGAIN</button>
+          </div>
+          <div>
+            <h1 style="color: white; text-align: center">COMPUTER</h1>
+            <div class="small-choice" id="small-choice"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-success" id="game-success">
+        <div class="stars">
+          <img class="star star1" src="./assets/Star 2.png" alt="" />
+          <img class="star star1" src="./assets/Star 6.png" alt="" />
+          <img class="star star2" src="./assets/Star 5.png" alt="" />
+          <img class="star star3" src="./assets/Star 7.png" alt="" />
+          <img class="star star3" src="./assets/Star 7.png" alt="" />
+          <img class="star star4" src="./assets/Star 9.png" alt="" />
+          <img class="star star5" src="./assets/Star 3.png" alt="" />
+          <img class="star star3" src="./assets/Star 7.png" alt="" />
+          <img class="star star1" src="./assets/Star 9.png" alt="" />
+          <div class="trophy">
+            <img src="./assets/Vector.png" alt="Trophy" />
+          </div>
+        </div>
+
+        <div class="success-text">
+          <h1 class="success-feel"></h1>
+          <p class="success-message"></p>
+        </div>
+        <button class="play-again-reset">PLAY AGAIN</button>
+        <button class="reset-again">RESET</button>
+      </div>
+    </div>
+
+    <div class="game-rules">
+      <button class="wrong-btn">X</button>
+      <h1 class="rules-head">Game Rules</h1>
+      <ul>
+        <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+        <li>
+          Agree ahead of time whether you’ll count off “rock, paper, scissors,
+          shoot” or just “rock, paper, scissors.”
+        </li>
+        <li>
+          Use rock, paper, scissors to settle minor decisions or simply play to
+          pass the time
+        </li>
+        <li>
+          If both players lay down the same hand, each player lays down another
+          hand
+        </li>
+      </ul>
+    </div>
+    <button class="rules">Rules</button>
+
+    <script src="app.js"></script>
+  </body>
+</html>
