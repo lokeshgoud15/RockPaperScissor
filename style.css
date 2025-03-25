@@ -494,6 +494,9 @@ a {
   letter-spacing: 3px;
   font-weight: 500;
 }
+.reset-again {
+  margin-top: 10px;
+}
 .success-text {
   display: flex;
   margin-top: 14px;
