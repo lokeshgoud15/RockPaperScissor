@@ -518,3 +518,6 @@ a {
 .stars-close {
   display: none;
 }
+.cup-reverse {
+  transform: rotate(180deg);
+}

@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let playerScoreBoard = document.querySelector(".p-score");
   const stars = document.querySelector(".stars");
   const star = document.querySelectorAll(".star");
+  const trophy = document.getElementById("trophy");
 
   closeBtn.addEventListener("click", () => {
     gameRules.classList.toggle("gamerules-close");
@@ -65,10 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
           if (winner === "you") {
             localStorage.setItem("yourScore", yourScore);
 
-            gameover(yourScore, pcScore);
+            gameover(winner);
           } else if (winner === "pc") {
             localStorage.setItem("pcScore", pcScore);
-            gameover(yourScore, pcScore);
+            gameover(winner);
           }
         }, 1500);
       });
@@ -255,18 +256,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     }
-    function gameover(yourScore, pcScore) {
+    function gameover(winner) {
       gameContainer.classList.remove("game-containerOpen");
       startContainer.classList.add("container-close");
       mainContainer.classList.add("main-close");
       gameSuccess.classList.add("game-successOpen");
-      if (yourScore < pcScore) {
-        stars.innerHTML = "";
-        star.innerHTML = "";
+      if (winner === "pc") {
         successFeel.textContent = "OOPS";
+        trophy.classList.add("cup-reverse");
         successMessage.textContent = "YOU LOST THE GAME";
         successMessage.style.color = "red";
       } else {
+        trophy.classList.remove("cup-reverse");
         successFeel.textContent = "HURRAY";
         successMessage.textContent = "YOU WON THE GAME";
         successMessage.style.color = "white";
