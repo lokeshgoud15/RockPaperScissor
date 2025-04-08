@@ -521,3 +521,51 @@ a {
 .cup-reverse {
   transform: rotate(180deg);
 }
+
+@keyframes ripple-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.star {
+  display: inline-block;
+  animation: starFloat 3s ease-in-out infinite;
+}
+
+.star.star1 {
+  animation-delay: 0s;
+}
+.star.star2 {
+  animation-delay: 0.5s;
+}
+.star.star3 {
+  animation-delay: 1s;
+}
+.star.star4 {
+  animation-delay: 1.5s;
+}
+.star.star5 {
+  animation-delay: 2s;
+}
+
+@keyframes starFloat {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
